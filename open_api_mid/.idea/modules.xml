@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/open_api_mid.iml" filepath="$PROJECT_DIR$/.idea/open_api_mid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/open_api_mid.open_api_mid.main.iml" filepath="$PROJECT_DIR$/.idea/modules/open_api_mid.open_api_mid.main.iml" />
+    </modules>
+  </component>
+</project>
