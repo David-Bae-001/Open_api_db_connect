@@ -1,31 +1,31 @@
 # Open_api_db_connect
 Open Api 및 DB 연동 (기상청 예보)
 
-# 1. 요구사항 및 적용내용
+# A. 요구사항 및 적용내용
 ## 1. 요구 기술 스택
 - Java : 11.0.17
 - Springboot 2.x : 2.7.17 / Intellij IDEA 2023.2.4
-  - MySQL + JPA 또는 MyBatis : MySQL(MySQL workbench 8.0 CE) + JPA
-  - TDD (optinal) : X
-  - ChatGPT (optional) : 단위 테스트 구현 시
+- MySQL + JPA 또는 MyBatis : MySQL(MySQL workbench 8.0 CE) + JPA
+- TDD (optinal) : X
+- ChatGPT (optional) : 단위 테스트 구현 시
 
- # 2. 구현 내용.
-  ## 1.1. Description : 서버간 연동으로 Open API 를 연동
-   - 기상청 중기 예보 
-   - 기상청 단기 예보 
-   - 기상청 초단기 예보 
-   - 확인할 수 있는 API 
-   - 각 구현의 단위 테스트 
-   - 확인할 수 있는 API 의 통합 테스트 (optional) : X
-   - Spring Rest Docs로 API 문서 생성 자동화 (optional) : X
+## 2. 구현 내용.
+### 1.1. Description : 서버간 연동으로 Open API 를 연동
+- 기상청 중기 예보 
+- 기상청 단기 예보 
+- 기상청 초단기 예보 
+- 확인할 수 있는 API 
+- 각 구현의 단위 테스트 
+- 확인할 수 있는 API 의 통합 테스트 (optional) : X
+- Spring Rest Docs로 API 문서 생성 자동화 (optional) : X
 
-  ## 1.2.  Description
-   - 각 API 의 데이터를 JPA Entity, 또는 그에 준하는 POJO class로 매핑, MySQL DB에 넣는다 : JPA Entity를 통해 MySQL DB 입력
-   - DB Layer (Repository Layer) 는 반드시 JPA 또는 MyBatis 를 사용해야 한다 : JPA 사용
-     - Repository Layer 에서 기본 JPA 메서드를 제외한, 직접 생성한 Query는 반드시 테스트 코드가 작성되어야 한다.
-   - Service 레이어에서 repository 로의 위임을 제외한 모든 로직은 테스트 코드가 작성되어야 한다 : HomeController 단위테스트 작성
-   - API 호출 또는 화면으로 위 구현사항을 확인 할 수 있어야 한다 : 구현
-   - **공공데이터 포탈에 기재된 예제 코드를 사용하지 않아야 한다.**
+### 1.2.  Description
+- 각 API 의 데이터를 JPA Entity, 또는 그에 준하는 POJO class로 매핑, MySQL DB에 넣는다 : JPA Entity를 통해 MySQL DB 입력
+- DB Layer (Repository Layer) 는 반드시 JPA 또는 MyBatis 를 사용해야 한다 : JPA 사용
+  - Repository Layer 에서 기본 JPA 메서드를 제외한, 직접 생성한 Query는 반드시 테스트 코드가 작성되어야 한다.
+- Service 레이어에서 repository 로의 위임을 제외한 모든 로직은 테스트 코드가 작성되어야 한다 : HomeController 단위테스트 작성
+- API 호출 또는 화면으로 위 구현사항을 확인 할 수 있어야 한다 : 구현
+- **공공데이터 포탈에 기재된 예제 코드를 사용하지 않아야 한다.**
 
  # 3. Chat GPT 사용시.
   - Chat GPT로 결과를 도출한 로그 첨부 : https://chat.openai.com/share/4be3e71c-485d-4930-b333-4e2658a2ab90
