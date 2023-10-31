@@ -1,10 +1,10 @@
 # Open_api_db_connect
 Open Api 및 DB 연동 (기상청 예보)
 
-A. 요구사항 및 적용내용
- # 1. 요구 기술 스택
-  - Java : 11.0.17
-  - Springboot 2.x : 2.7.17 / Intellij IDEA 2023.2.4
+# 1. 요구사항 및 적용내용
+## 1. 요구 기술 스택
+- Java : 11.0.17
+- Springboot 2.x : 2.7.17 / Intellij IDEA 2023.2.4
   - MySQL + JPA 또는 MyBatis : MySQL(MySQL workbench 8.0 CE) + JPA
   - TDD (optinal) : X
   - ChatGPT (optional) : 단위 테스트 구현 시
