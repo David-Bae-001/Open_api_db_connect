@@ -1,6 +1,7 @@
 # Open_api_db_connect
 Open Api 및 DB 연동 (기상청 예보)
 
+
 # A. 요구사항 및 적용내용
 ## 1. 요구 기술 스택
 - Java : 11.0.17
@@ -9,7 +10,7 @@ Open Api 및 DB 연동 (기상청 예보)
 - TDD (optinal) : X
 - ChatGPT (optional) : 단위 테스트 구현 시
 
-## 2. 구현 내용.
+## 2. 요구 구현 조건
 ### 1.1. Description : 서버간 연동으로 Open API 를 연동
 - 기상청 중기 예보 
 - 기상청 단기 예보 
@@ -30,12 +31,14 @@ Open Api 및 DB 연동 (기상청 예보)
 ## 3. Chat GPT 사용시.
 - Chat GPT로 결과를 도출한 로그 첨부 : https://chat.openai.com/share/4be3e71c-485d-4930-b333-4e2658a2ab90
 
+
 # B. 구현결과
 ### 1. 기상청 중기 / 단기 / 초단기 예보 단순 확인을 위한 api 연동 완료 : 입력받는 값(위치, 시간)은 임의로 적용(서울, 실행일자 기준 06시)
 ### 2. 확인할 수 있는 API 구현 : 중기예보 완료(단기/초단기 예보 미구현)
 - 확인하고자 하는 지역 사용자 입력(http://localhost:8080/api) -> JPA를 통한 api response 값을 DB로 저장(table 생성 및 DB 초기화 후 저장, MySQL)-> 생성된 테이블에 전체 값을 선택하여 출력(http://localhost:8080/result?loc=108)
 ### 3. 단위테스트 : 확인할 수 있는 API가 구현된 중기예보에 대해 단위테스트 작성
 - Chat GPT 활용 하 작성 : HomeController
+
 
 # C. 구현 세부내용
 ### 1. Github
@@ -53,6 +56,7 @@ Open Api 및 DB 연동 (기상청 예보)
 ### 4. DB(MySQL)
 - DB 연결값이 정확하다면 사전 table 생성 없이도 자동으로 table 생성
 - id값은 auto increment로 초기화시 같이 초기화되지 않아 값이 누적됨
+
 
 # D. 결과 및 과정 중 배운 점 / 보완할 점
 ### 1. 기존에 Open Api를 다뤄보지 않아 처음부터 끝까지 부족한 점이 많았음(구글링 다수 활용)
