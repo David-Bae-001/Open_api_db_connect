@@ -50,6 +50,9 @@ Open Api 및 DB 연동 (기상청 예보)
 - http://localhost:8080/api : HomeController.java ~ index.html / 사용자 입력값(지역) 입력, 시간은 실행일자 06시로 자동입력, 한글로 받은 사용자 입력값(loc)을 api에서 요구하는 3자리 숫자로 변경(String), load_save()에서 api 연동 및 json을 분해하여 response > body > items > item 내부에 있는 값들을 itemArr로 받고 인덱스를 포함해 DB에 저장(DB 초기화 포함 : 초기화 없을 경우 DB가 계속 쌓임), "/result?loc="+loc로 리다이렉트
 - http://localhost:8080/result?loc=108 : ResultController.java ~ result.html / Repository(WeatherInfoRepository)를 통해 저장된 DB를 출력
 - HomeControllerTest : loc = "서울"로 테스트할 값을 정하고 "/api"를 통해 리다이렉트 된 값이 "/result?loc=109"가 맞는지 확인
+### 4. DB(MySQL)
+- DB 연결값이 정확하다면 사전 table 생성 없이도 자동으로 table 생성
+- id값은 auto increment로 초기화시 같이 초기화되지 않아 값이 누적됨
 
 # D. 결과 및 과정 중 배운 점 / 보완할 점
 ### 1. 기존에 Open Api를 다뤄보지 않아 처음부터 끝까지 부족한 점이 많았음(구글링 다수 활용)
